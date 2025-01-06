@@ -1,7 +1,7 @@
 import torch
 
 class CryptoDataset(torch.utils.data.Dataset):
-    def __init__(self, data, seq_len=30):
+    def __init__(self, data, seq_len=40):
         self.data = data
         self.seq_len = seq_len
     def __len__(self):
