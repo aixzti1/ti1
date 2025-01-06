@@ -14,8 +14,6 @@ Ti1 is an advanced, modular framework for analyzing cryptocurrency markets, gene
 
 This repository provides a complete pipeline for building, training, testing, and deploying AI models to generate actionable cryptocurrency trading signals. By utilizing PyTorch for deep learning, CCXT for market data acquisition, and Tweepy for social media integration, Ti1 offers a scalable ecosystem for end-to-end AI-powered trading solutions.
 
----
-
 ## Features
 
 ### **Data Handling**
