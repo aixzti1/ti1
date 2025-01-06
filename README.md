@@ -4,6 +4,10 @@ Ti1 is an advanced, modular framework for analyzing cryptocurrency markets, gene
 
 ---
 
+## Ti1 is powered by $Ti1 Solana token with contract address
+
+`ti1AicEoKpi5e8Jdi2EV43piqAzzFwvH8AC3X9LiuKt`
+
 ## WEB: https://ti1.ai/
 ## X: https://x.com/ti1agent
 ## DEV: https://x.com/aixzti1
