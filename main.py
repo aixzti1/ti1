@@ -20,12 +20,14 @@ from utils.logger import Logger
 from agents.agent_factory import AgentFactory
 from agents.agent_manager import AgentManager
 
+
 def get_crypto_data(symbol='BTC/USDT', limit=500):
     exchange = ccxt.binance()
     data = exchange.fetch_ohlcv(symbol, timeframe='1h', limit=limit)
     df = pd.DataFrame(data, columns=['time','open','high','low','close','volume'])
     df.set_index('time', inplace=True)
     return df
+
 
 def select_model(model_name, input_size, hidden_size, num_layers):
     if model_name == 'lstm':
@@ -34,6 +36,7 @@ def select_model(model_name, input_size, hidden_size, num_layers):
         return TransformerModel(input_size=input_size, d_model=hidden_size, nhead=4, num_layers=num_layers)
     else:
         return EnsembleModel(input_size=input_size, hidden_size=hidden_size)
+
 
 def main():
     config = Config()
@@ -67,6 +70,7 @@ def main():
     access_token_secret = os.getenv('TWITTER_ACCESS_TOKEN_SECRET')
     tweet_signal(api_key, api_key_secret, access_token, access_token_secret, f'Signal: {signal}')
     logger.log(f'Signal: {signal}')
+
 
 if __name__ == '__main__':
     main()
