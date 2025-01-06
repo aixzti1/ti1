@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 
 class TransformerModel(nn.Module):
-    def __init__(self, input_size=6, d_model=64, nhead=4, num_layers=2):
+    def __init__(self, input_size=8, d_model=128, nhead=4, num_layers=2):
         super().__init__()
         self.linear_in = nn.Linear(input_size, d_model)
         encoder_layer = nn.TransformerEncoderLayer(d_model=d_model, nhead=nhead)
