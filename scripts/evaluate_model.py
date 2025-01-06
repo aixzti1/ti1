@@ -6,7 +6,7 @@ def evaluate(model, loader):
     preds = []
     trues = []
     with torch.no_grad():
-        for x, y in loader:
+        for i, x, y in enumerate(loader):
             out = model(x)
             preds.extend(out.squeeze().tolist())
             trues.extend(y.tolist())
