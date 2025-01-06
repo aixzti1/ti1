@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
+import torchaudio
 
 class TrainerLSTM:
     def __init__(self, model, loader, config):
